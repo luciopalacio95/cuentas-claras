@@ -1,16 +1,10 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { FaRegTrashAlt } from "react-icons/fa";
 import { HiArrowNarrowRight } from "react-icons/hi";
 
 export default function Calculador(){
 
-    const [integrantes, setintegrantes] = useState([
-        {nombre: "Lucio", cuanto: 5500},
-        {nombre: "churro", cuanto: 3800},
-        {nombre: "Fran", cuanto: 0},
-        {nombre: "Fede", cuanto: 12000},
-        {nombre: "lautaro", cuanto:9000}
-    ]);
+    const [integrantes, setintegrantes] = useState([]);
     const [nombre, setNombre] = useState(""); 
     const [cuanto, setCuanto] = useState(0); 
     const [errorCalculo, setErrorCalculo] = useState(false);
