@@ -1,8 +1,15 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## comandos para correr proyecto
+- npm install
+- npm run dev
+- npm run build (produccion, crea carpeta dist)
 
-Currently, two official plugins are available:
+## libreria de iconos utilizados
+https://react-icons.github.io/react-icons/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Libreria para compartir en whatsapp
+https://www.npmjs.com/package/react-share
+
+## volver el protecto una PWA
+https://medium.com/@rakeshdhariwal61/converting-your-react-vite-app-into-pwa-d7211e9cd0c5

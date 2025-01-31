@@ -7,11 +7,7 @@ import Share from "../layouts/share";
 export default function Calculador(){
 
     const intl = useIntl();
-    const [integrantes, setintegrantes] = useState([
-        {"nombre": "Lucio", "cuanto": 5000},
-        {"nombre": "Pepito", "cuanto": 200},
-        {"nombre": "Churro", "cuanto": 0}
-    ]);
+    const [integrantes, setintegrantes] = useState([]);
     const [nombre, setNombre] = useState(""); 
     const [cuanto, setCuanto] = useState(0); 
     const [errorCalculo, setErrorCalculo] = useState(false);
