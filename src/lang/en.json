@@ -8,6 +8,11 @@
     "general.calcular_aviso": "There must be at least 2 participants.",
     "general.en_total": "In total they spent",
     "general.cada_uno": "each one",
-    "general.saldo": "Balance Adjustments"
+    "general.saldo": "Balance Adjustments",
+    "general.enviar_por": "Send by:",
+    "share.titulo": "Hello, this is the balance adjustment!",
+    "share.cortesia": "Courtesy of",
+    "share.puso": "- *{valor1}* put *${valor2}*",
+    "share.debe_pagar": "*{valor1}* must pay *${valor2}* to *{valor3}*"
 
 }

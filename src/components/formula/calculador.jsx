@@ -2,11 +2,16 @@ import { useState } from "react";
 import { FaRegTrashAlt } from "react-icons/fa";
 import { HiArrowNarrowRight } from "react-icons/hi";
 import {FormattedMessage, useIntl} from 'react-intl';
+import Share from "../layouts/share";
 
 export default function Calculador(){
 
     const intl = useIntl();
-    const [integrantes, setintegrantes] = useState([]);
+    const [integrantes, setintegrantes] = useState([
+        {"nombre": "Lucio", "cuanto": 5000},
+        {"nombre": "Pepito", "cuanto": 200},
+        {"nombre": "Churro", "cuanto": 0}
+    ]);
     const [nombre, setNombre] = useState(""); 
     const [cuanto, setCuanto] = useState(0); 
     const [errorCalculo, setErrorCalculo] = useState(false);
@@ -167,7 +172,10 @@ export default function Calculador(){
                     </span>
                 }
                 {calculado ?
-                    <button type="button" onClick={reset} className="flex items-center m-auto mt-5 justify-center text-white bg-orange-400 hover:bg-orange-600 focus:ring-2 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xl w-auto px-16 py-2.5 text-center dark:bg-orange-400 dark:hover:bg-orange-500 dark:focus:ring-orange-600"><FormattedMessage id="general.calcular_otro" defaultMessage="Hacer otro calculo"/></button>
+                    <>
+                        <Share integrantes={integrantes} transactions={transactions} total={total} cadaUno={cadaUno}/>
+                        <button type="button" onClick={reset} className="flex items-center m-auto mt-5 justify-center text-white bg-orange-400 hover:bg-orange-600 focus:ring-2 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xl w-auto px-16 py-2.5 text-center dark:bg-orange-400 dark:hover:bg-orange-500 dark:focus:ring-orange-600"><FormattedMessage id="general.calcular_otro" defaultMessage="Hacer otro calculo"/></button>
+                    </>
                     :
                     <button type="button" onClick={calcular} className="flex items-center m-auto mt-3 justify-center text-white bg-orange-400 hover:bg-orange-600 focus:ring-2 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xl w-auto px-16 py-2.5 text-center dark:bg-orange-400 dark:hover:bg-orange-500 dark:focus:ring-orange-600"><FormattedMessage id="general.calcular" defaultMessage="Calcular"/></button>
                 }
